@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardlistComponent } from './dashboardlist/dashboardlist.component';
+import { CommonModule } from '@angular/common';
  
 export const routes: Routes = [
   {
-    path: 'dashboard',
+    path: '',
     component: DashboardlistComponent
   }
 ];
@@ -15,8 +16,8 @@ export const routes: Routes = [
     DashboardlistComponent
   ],
   imports: [
-    BrowserModule,
-    RouterModule.forRoot(routes)
+     CommonModule,
+    RouterModule.forChild(routes)
   ],
   providers: [],
   bootstrap: []
