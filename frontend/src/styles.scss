@@ -1,13 +1,19 @@
-@import  "./styles/settings.scss";
+@import "./styles/settings.scss";
 
 
 body {
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
-    font-family: $rams-font-stack;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  font-family: $rams-font-stack;
+}
+
+html {
+  height: -webkit-fill-available;
+  color: $text-color;
+}
+
+.rams-{
+  &padding{
+    padding: 5px;
   }
-  
-  html {
-    height: -webkit-fill-available;
-    color: $text-color;
-  }
+}
