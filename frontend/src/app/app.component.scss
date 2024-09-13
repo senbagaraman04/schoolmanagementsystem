@@ -1,0 +1,35 @@
+ @import "../styles/settings.scss";
+
+.side-nav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+ 
+  left: 0;
+  background-color: $rams-primary-color;
+  padding: 15px;
+}
+
+.header {
+  background-color: $rams-secondary-color;
+
+}
+
+.side-nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.side-nav ul li {
+  margin: 10px 0;
+}
+
+.side-nav ul li a {
+  text-decoration: none;
+  display: block;
+}
+
+.side-nav ul li a.active {
+  font-weight: bold;
+  color: #007bff;
+}

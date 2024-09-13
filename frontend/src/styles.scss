@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@import  "./styles/settings.scss";
+
+
+body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    font-family: $rams-font-stack;
+  }
+  
+  html {
+    height: -webkit-fill-available;
+    color: $text-color;
+  }

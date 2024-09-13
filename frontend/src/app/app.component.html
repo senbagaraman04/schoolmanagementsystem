@@ -1,6 +1,18 @@
-Rams School Management System
 
-<nav>
- 
-</nav>
- <router-outlet></router-outlet>
+<div class="header">
+  <h1>School Management System</h1>
+</div>
+
+<div class="side-nav">
+  <ul>
+    <li><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
+    <li><a routerLink="#" routerLinkActive="active" class="rams-sms-disabled">Branches</a></li>
+    <li><a routerLink="#" routerLinkActive="active" class="rams-sms-disabled">Staffs</a></li>
+    <li><a routerLink="#" routerLinkActive="active" class="rams-sms-disabled">Students</a></li>
+  </ul>
+</div>
+
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

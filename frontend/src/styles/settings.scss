@@ -1,0 +1,18 @@
+$rams-primary-color: #333333;
+$rams-secondary-color: #F7F7F7;
+$rams-accent-color: #F2C464;
+$rams-font-stack: Helvetica, sans-serif;
+
+$text-color: #ffffff;
+$button-bg-color: #1a5276;
+$button-text-color: #ffffff;
+
+.rams-button {
+    background-color: $button-bg-color;
+    color: $button-text-color;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
