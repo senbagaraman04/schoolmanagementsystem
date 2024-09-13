@@ -1,35 +1,37 @@
  @import "../styles/settings.scss";
-
-.side-nav {
-  height: 100%;
-  width: 200px;
-  position: fixed;
- 
-  left: 0;
-  background-color: $rams-primary-color;
-  padding: 15px;
+ @media (min-width: 576px) {
+  .title-outside {
+      display: none;
+  }
 }
 
-.header {
-  background-color: $rams-secondary-color;
-
+.navbar-brand, .navbar-app-title {
+  display: flex;
+  align-items: center;
+  min-block-size: 48px;
 }
 
-.side-nav ul {
-  list-style-type: none;
-  padding: 0;
+
+.rams {
+  &-elevation-navbar{
+    box-shadow: 0 0 4px rgba(0, 0, 0, .4), 0 4px 4px rgba(0, 0, 0, .2);
+  }
 }
 
-.side-nav ul li {
-  margin: 10px 0;
+main{
+  padding-inline-start: 242px; //TODO: Rewrite in pixcel, no magic numbers
+  padding-top: 65px;//TODO: Rewrite in pixcel, no magic numbers
 }
 
-.side-nav ul li a {
-  text-decoration: none;
-  display: block;
-}
 
-.side-nav ul li a.active {
-  font-weight: bold;
-  color: #007bff;
+
+nav{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 1031;
+    inset-block-start: 65px;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    inline-size: 0;
 }

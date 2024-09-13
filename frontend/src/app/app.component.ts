@@ -7,4 +7,26 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'schoolmanagementsystem';
+
+  collapsed = false;
+
+  navbarExpandButtonText = 'Expand';
+
+  navbarCollapseButtonText = 'Collapse';
+
+
+  items = [
+    
+  ]
+
+  toggleCollapse() {
+    this.collapsed = !this.collapsed;
+    if (this.collapsed) {
+      this.navbarExpandButtonText = 'Expand';
+      this.navbarCollapseButtonText = 'Collapse';
+    } else {
+      this.navbarExpandButtonText = 'Collapse';
+      this.navbarCollapseButtonText = 'Expand';
+    }
+  }
 }
