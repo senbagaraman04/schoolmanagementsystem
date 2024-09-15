@@ -7,6 +7,9 @@ export const routes: Routes = [
   {
     path: "dashboard",
     loadChildren: () => import("./components/dashboard/dashboard.module").then(m => m.DashboardModule)
+  },{
+    path: "branch",
+    loadChildren: () => import("./components/branches/branches.module").then(m => m.BranchesModule)
   }
 ];
 

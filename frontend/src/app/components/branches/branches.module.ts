@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardlistComponent } from './dashboardlist/dashboardlist.component';
-import { CommonModule } from '@angular/common';
+ import { CommonModule } from '@angular/common';
+import { BranchlistComponent } from './branchlist/branchlist.component';
  
 export const routes: Routes = [
   {
-    path: '',
-    component: DashboardlistComponent
+    path: "",
+    component: BranchlistComponent
   }
 ];
 
 @NgModule({
   declarations: [
-    DashboardlistComponent
+    BranchlistComponent
   ],
   imports: [
      CommonModule,
@@ -21,4 +21,4 @@ export const routes: Routes = [
   providers: [],
   bootstrap: []
 })
-export class DashboardModule { }
+export class BranchesModule { }

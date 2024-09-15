@@ -48,4 +48,7 @@ public class Branch {
      * Code of the branch.
      */
     String branchCode;
+
+    @Builder.Default
+    Boolean isActive = true;
 }
