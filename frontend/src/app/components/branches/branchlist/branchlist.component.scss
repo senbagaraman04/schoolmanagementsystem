@@ -1,0 +1,18 @@
+.rams-sms-branch-list-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+a{
+    
+    color: #00cccc; //Secondary Text color
+    background: #23233c; //base-1
+    padding-inline: 8px;
+}
+
+.item-wrapper{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-inline-size: 24px;
+}

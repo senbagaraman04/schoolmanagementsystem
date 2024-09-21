@@ -28,22 +28,23 @@
 
     </div>
 
-
+<hr>
     <div class="rams-sms-branch-list">
-        <div class="rams-sms-branch-list-header">
+        <div class="rams-sms-branch-list-header mb-2">
             <div class="rams-sms-branch-list-header-title">
                 Branches
             </div>
-            <div class="rams-sms-branch-list-header-action" style="float:right">
-                <button class="btn btn-primary">
-                    Add Branch
-                </button>
+            <div class="rams-sms-branch-list-header-action">
+                <button type="button" class="btn btn-primary" (click)="addBranchClick()">
+                   Add Branch
+                  </button>
+                  &nbsp;
                 <button class="btn btn-primary" disabled="true">
                     Download Branch
                 </button>
             </div>
         </div>
-        <div class="rams-sms-branch-list-table">
+        <div class="rams-sms-branch-list-table mt-3" *ngIf="showTable">
             <table class="table">
                 <thead>
                     <tr>
@@ -67,6 +68,59 @@
                 </tbody>
             </table>
         </div>
+
+        <div class="rams-sms-branch-form mt-3" *ngIf="!showTable">
+            <form [formGroup]="createBranchFormGroup">
+                        <div class="header-save-btn">
+                            <button type="button" class="btn btn-primary" (click)="saveBranchClick()">
+                                Save 
+                            </button>
+                        </div>
+                        <div class="mb-3 row flex-nowrap">
+                          <label for="branchName" class="col-auto col-form-label" [class.required]="true"
+                            >Branch name</label
+                          >
+                          <div class="col-10">
+                            <input  [formControl]="getFormControlDetaisl('branchName')"
+                              name="branchName" class="form-control"  id="branchName"
+                          
+                            placeholder="Enter the name of the branch">
+                          </div>
+                        </div>
+
+                        <div class="mb-3 row flex-nowrap">
+                            <label for="branchPhone" class="col-auto col-form-label"  [class.required]="true"
+                              >Branch phone</label
+                            >
+                            <div class="col-10">
+                              <input  [formControl]="getFormControlDetaisl('branchPhone')" 
+                                name="branchPhone" class="form-control"  
+                                id="branchPhone"
+                              placeholder="Enter the phone number of the branch">
+                            </div>
+                          </div>
+                      
+                          
+
+                          <div class="mb-3 row flex-nowrap">
+                            <label for="branchAddress" class="col-auto col-form-label"  [class.required]="true"
+                              >Branch address</label
+                            >
+                            <div class="col-10">
+                              <input  [formControl]="getFormControlDetaisl('branchAddress')"
+                                name="branchAddress" class="form-control"  
+                                id="branchAddress"
+                              placeholder="Enter the address of the branch">
+                            </div>
+                          </div>
+                        
+                      
+               </form>
+        </div>
+           
+        </div>
     </div>
-</div>
  
+ 
+
+
