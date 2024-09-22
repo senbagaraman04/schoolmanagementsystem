@@ -29,4 +29,9 @@ public class BranchController {
     public ResponseEntity<Branch> createBranch(@RequestBody CreateBranchRequest createBranchRequest) {
         return ResponseEntity.ok(branchService.createBranch(createBranchRequest));
     }
+
+    @GetMapping("/{branchId}")
+    public ResponseEntity<Branch> getBranchById(@PathVariable String branchId) {
+        return ResponseEntity.ok(branchService.getBranchById(branchId));
+    }
 }
