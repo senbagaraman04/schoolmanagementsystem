@@ -1,1 +1,14 @@
-<p>rams-button works!</p>
+  
+<form>
+    <button 
+        type="submit" 
+        class="rams-btn" 
+        [disabled]="isDisabled" 
+        [attr.aria-label]="buttonText" 
+        [attr.title]="buttonText"
+        [ngClass]="buttonClass"
+        (click)="handleClick()">
+        {{buttonText}}
+    </button>
+</form>
+

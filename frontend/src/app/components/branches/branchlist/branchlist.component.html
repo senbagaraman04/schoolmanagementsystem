@@ -35,7 +35,7 @@
 
 
 
-
+<rams-sms-button buttonClass="rams-btn-outline" buttonText="Click Here"></rams-sms-button>
 
 
 
@@ -94,52 +94,7 @@
         </div>
 
         <div class="rams-sms-branch-form mt-3" *ngIf="!showTable">
-            <form [formGroup]="createBranchFormGroup">
-                        <div class="header-save-btn">
-                            <button type="button" class="btn btn-primary" (click)="saveBranchClick()">
-                                Save 
-                            </button>
-                        </div>
-                        <div class="mb-3 row flex-nowrap">
-                          <label for="branchName" class="col-auto col-form-label" [class.required]="true"
-                            >Branch name</label
-                          >
-                          <div class="col-10">
-                            <input  [formControl]="getFormControlDetaisl('branchName')"
-                              name="branchName" class="form-control"  id="branchName"
-                          
-                            placeholder="Enter the name of the branch">
-                          </div>
-                        </div>
-
-                        <div class="mb-3 row flex-nowrap">
-                            <label for="branchPhone" class="col-auto col-form-label"  [class.required]="true"
-                              >Branch phone</label
-                            >
-                            <div class="col-10">
-                              <input  [formControl]="getFormControlDetaisl('branchPhone')" 
-                                name="branchPhone" class="form-control"  
-                                id="branchPhone"
-                              placeholder="Enter the phone number of the branch">
-                            </div>
-                          </div>
-                      
-                          
-
-                          <div class="mb-3 row flex-nowrap">
-                            <label for="branchAddress" class="col-auto col-form-label"  [class.required]="true"
-                              >Branch address</label
-                            >
-                            <div class="col-10">
-                              <input  [formControl]="getFormControlDetaisl('branchAddress')"
-                                name="branchAddress" class="form-control"  
-                                id="branchAddress"
-                              placeholder="Enter the address of the branch">
-                            </div>
-                          </div>
-                        
-                      
-               </form>
+          <rams-sms-branchform></rams-sms-branchform>
         </div>
            
         </div>

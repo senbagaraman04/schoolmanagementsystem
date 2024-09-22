@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BranchlistComponent } from './branchlist/branchlist.component';
 import { BranchformComponent } from './branchform/branchform.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../../shared/shared.module';
  
 export const routes: Routes = [
   {
@@ -20,9 +21,10 @@ export const routes: Routes = [
     
   ],
   imports: [
-     CommonModule,
+    CommonModule,
     ReactiveFormsModule,
     FormsModule,
+    SharedModule,
     RouterModule.forChild(routes)
   ],
   providers: [],
