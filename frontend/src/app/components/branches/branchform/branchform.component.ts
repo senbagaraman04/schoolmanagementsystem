@@ -1,5 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { CreateBranchPayload } from '../models';
+import { BranchService } from '../service/branch.service';
 
 @Component({
   selector: 'rams-sms-branchform',
@@ -9,7 +13,9 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 export class BranchformComponent {
 
 
-  public formBuilder: FormBuilder = inject(FormBuilder);
+  private formBuilder: FormBuilder = inject(FormBuilder);
+
+  private branchService: BranchService = inject(BranchService);
 
   public  createBranchFormGroup: FormGroup = this.formBuilder.group({
     branchName: new FormControl(''),
@@ -26,6 +32,14 @@ export class BranchformComponent {
 
 
   saveBranchClick(){
+   const payload: CreateBranchPayload = {
+    branchAddress: this.createBranchFormGroup.getRawValue().branchAddress,
+    branchName: this.createBranchFormGroup.getRawValue().branchName,
+    branchPhone: this.createBranchFormGroup.getRawValue().branchPhone
+   };
+
+
+   this.branchService.createBranch(payload).subscribe(() => {});
 
   }
   

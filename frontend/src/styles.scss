@@ -2,9 +2,7 @@
 
 
 body {
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
-  font-family: $rams-font-stack;
+   font-family: $rams-font-stack;
 }
 
 html {
@@ -12,16 +10,48 @@ html {
   color: $text-color;
 }
 
-.rams-{
-  &padding{
+.rams- {
+  &padding {
     padding: 5px;
   }
 
-  &grid-row{
+  &grid-row {
     display: grid;
-grid-template-columns: repeat(3, 1fr);
-grid-template-rows: 1fr 1fr;
-grid-row-gap: 1px;
-grid-column-gap: 9px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 1px;
+    grid-column-gap: 9px;
+  }
 }
+
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
+
+.has-navbar-fixed-top {
+  flex: 0 0 auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  background-color: #007bff;
+  color: white;
+}
+
+.navbar-app-title-inner {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+ 

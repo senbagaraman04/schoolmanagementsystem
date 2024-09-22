@@ -1,84 +1,55 @@
-
-<!-- Header Nav Bar-->
-<div class="has-navbar-fixed-top d-flex flex-column h-100 w-100">
-  <header class="navbar navbar-primary navbar-expand-sm fixed-top rams-elevation-navbar focus-inside focus-direct-sub-inside"
-    aria-label="Primary">
-    <div class="collapse navbar-collapse">
-      <div class="start">
-        <div class="title-collapse "><a class="navbar-app-title focus-inside" href="#">
-            <div class="navbar-app-title-inner text-truncate px-6">School Management System</div>
-          </a></div>
-      </div>   
-    </div>
-  </header>
-</div>
-
-<!-- Sidenav navigation panel -->
-
-<ng-container class="rams-panel-container">
-<nav class="rams-elevation-navbar focus-sub-inside" style="inline-size: 240px">
-  <div class="nav-scroll">
-    <div class="mb-4 mt-4">
-      <a
-      activeclass="active" 
-      class="nav-link focus-inside"
-       href="/dashboard" title="Dashbaord">
-      
-      <span
-       class="item-title text-truncate fw-bold ps-4">Dashbaord</span></a>
-    </div>
-    <div class="mb-4 mt-4">
-      <a
-      activeclass="active" 
-      class="nav-link focus-inside"
-       href="/branch" title="Dashbaord">
-      
-      <span
-       class="item-title text-truncate fw-bold ps-4">Branches</span></a>
-    </div>
-    <div class="mb-4 mt-4">
-      <a
-      activeclass="active" 
-      class="nav-link focus-inside"
-       href="#" title="Staff" disabled>
-      
-      <span
-       class="item-title text-truncate fw-bold ps-4">Staff</span></a>
-    </div>
-    <div class="mb-4 mt-4">
-      <a
-      activeclass="active" 
-      class="nav-link focus-inside"
-       href="#" title="Students">
-      
-      <span
-       class="item-title text-truncate fw-bold ps-4">Students</span></a>
-    </div>
-    <div class="mb-4 mt-4">
-      <a
-      activeclass="active" 
-      class="nav-link focus-inside"
-       href="#" title="Exams">
-      
-      <span
-       class="item-title text-truncate fw-bold ps-4">Exams</span></a>
-    </div>
-    <div class="mb-4 mt-4">
-      <a
-      activeclass="active" 
-      class="nav-link focus-inside"
-       href="#" title="Report">
-      
-      <span
-       class="item-title text-truncate fw-bold ps-4">Report</span></a>
+<!-- Header Nav Bar -->
+    <div class="has-navbar-fixed-top">
+        <header class="navbar navbar-primary navbar-expand-sm fixed-top rams-elevation-navbar focus-inside focus-direct-sub-inside"
+            aria-label="Primary">
+            <div class="title-collapse">
+                <a class="navbar-app-title focus-inside" href="#">
+                    <div class="navbar-app-title-inner text-truncate px-6">School Management System</div>
+                </a>
+            </div>
+        </header>
     </div>
 
-  </div>
-</nav>
+    <!-- Sidenav navigation panel -->
+    <ng-container class="rams-panel-container">
+        <nav class="rams-elevation-navbar focus-sub-inside">
+            <div class="nav-scroll d-flex">
+                <div class="mb-4 mt-4">
+                    <a activeclass="active" class="nav-link focus-inside" href="/dashboard" title="Dashboard">
+                        <span class="item-title text-truncate fw-bold ps-4">Dashboard</span>
+                    </a>
+                </div>
+                <div class="mb-4 mt-4">
+                    <a activeclass="active" class="nav-link focus-inside" href="/branch" title="Branches">
+                        <span class="item-title text-truncate fw-bold ps-4">Branches</span>
+                    </a>
+                </div>
+                <div class="mb-4 mt-4">
+                    <a activeclass="active" class="nav-link focus-inside" href="#" title="Staff" disabled>
+                        <span class="item-title text-truncate fw-bold ps-4">Staff</span>
+                    </a>
+                </div>
+                <div class="mb-4 mt-4">
+                    <a activeclass="active" class="nav-link focus-inside" href="#" title="Students">
+                        <span class="item-title text-truncate fw-bold ps-4">Students</span>
+                    </a>
+                </div>
+                <div class="mb-4 mt-4">
+                    <a activeclass="active" class="nav-link focus-inside" href="#" title="Exams">
+                        <span class="item-title text-truncate fw-bold ps-4">Exams</span>
+                    </a>
+                </div>
+                <div class="mb-4 mt-4">
+                    <a activeclass="active" class="nav-link focus-inside" href="#" title="Report">
+                        <span class="item-title text-truncate fw-bold ps-4">Report</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
 
-<main>
-  <div class="d-flex flex-column h-100">
-    <router-outlet></router-outlet>
-  </div>
-</main>
-</ng-container>
+        <main>
+            <div class="d-flex flex-column h-100">
+                <router-outlet></router-outlet>
+            </div>
+        </main>
+    </ng-container>

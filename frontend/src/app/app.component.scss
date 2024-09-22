@@ -1,37 +1,121 @@
  @import "../styles/settings.scss";
- @media (min-width: 576px) {
-  .title-outside {
-      display: none;
-  }
-}
+//  @media (min-width: 576px) {
+//   .title-outside {
+//       display: none;
+//   }
+// }
 
-.navbar-brand, .navbar-app-title {
+// .navbar-brand, .navbar-app-title {
+//   display: flex;
+//   align-items: center;
+//   min-block-size: 48px;
+// }
+
+
+// .rams {
+//   &-elevation-navbar{
+//     box-shadow: 0 0 4px rgba(0, 0, 0, .4), 0 4px 4px rgba(0, 0, 0, .2);
+//   }
+// }
+
+// main{
+//   padding-inline-start: 242px; //TODO: Rewrite in pixcel, no magic numbers
+//   padding-top: 65px;//TODO: Rewrite in pixcel, no magic numbers
+// }
+
+
+
+// nav{
+//     display: flex;
+//     flex-direction: column;
+//     position: fixed;
+//     z-index: 1031;
+//     inset-block-start: 65px;
+//     inset-block-end: 0;
+//     inset-inline-start: 0;
+//     inline-size: 0;
+// }
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
   display: flex;
-  align-items: center;
-  min-block-size: 48px;
+  flex-direction: column;
 }
 
+.has-navbar-fixed-top {
+  flex: 0 0 auto;
+}
 
-.rams {
-  &-elevation-navbar{
-    box-shadow: 0 0 4px rgba(0, 0, 0, .4), 0 4px 4px rgba(0, 0, 0, .2);
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  background-color: #007bff;
+  color: white;
+}
+
+.navbar-app-title-inner {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rams-panel-container {
+  display: flex;
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+nav {
+  flex: 0 0 240px;
+  background-color: #f8f9fa;
+  overflow-y: auto;
+}
+
+.nav-scroll {
+  padding: 1rem;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.nav-link.active {
+  font-weight: bold;
+}
+
+main {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  nav {
+      flex: 0 0 100%;
+      order: 1;
+  }
+
+  main {
+      order: 2;
   }
 }
 
-main{
-  padding-inline-start: 242px; //TODO: Rewrite in pixcel, no magic numbers
-  padding-top: 65px;//TODO: Rewrite in pixcel, no magic numbers
-}
+@media (max-width: 576px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
 
-
-
-nav{
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    z-index: 1031;
-    inset-block-start: 65px;
-    inset-block-end: 0;
-    inset-inline-start: 0;
-    inline-size: 0;
+  .navbar-app-title-inner {
+      padding: 0.5rem 0;
+  }
 }

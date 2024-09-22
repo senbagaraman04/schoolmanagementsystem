@@ -30,42 +30,22 @@
 
 <hr>
 
-
-
-
-
-
-<rams-sms-button buttonClass="rams-btn-outline" buttonText="Click Here"></rams-sms-button>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <div class="rams-sms-branch-list">
         <div class="rams-sms-branch-list-header mb-2">
             <div class="rams-sms-branch-list-header-title">
                 Branches
             </div>
-            <div class="rams-sms-branch-list-header-action">
-                <button type="button" class="btn btn-primary" (click)="addBranchClick()">
-                   Add Branch
-                  </button>
+            <div class="rams-sms-branch-list-header- d-flex">
+               
+                  <rams-sms-button buttonText="Add Branch" 
+                  [isDisabled]="false"
+                   [buttonClass]="'rams-btn-outline'" 
+                   (click)="addBranchClick()"></rams-sms-button>
                   &nbsp;
-                <button class="btn btn-primary" disabled="true">
-                    Download Branch
-                </button>
+                  <rams-sms-button buttonText="Download Branch" 
+                  [isDisabled]="true"
+                   [buttonClass]="'rams-btn-outline'" 
+                   ></rams-sms-button>
             </div>
         </div>
         <div class="rams-sms-branch-list-table mt-3" *ngIf="showTable">
